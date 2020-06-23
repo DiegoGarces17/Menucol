@@ -1,0 +1,9 @@
+
+<%= simple_form_for @restaurante,  url: url_for(@restaurante) do |f|%> 
+  
+   <%= f.input :nombre %> 
+   <%= f.input :direccion %> 
+   <%= f.input :telefono %> 
+   <%= f.button :submit %>
+
+<% end %>

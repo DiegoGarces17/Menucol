@@ -1,0 +1,22 @@
+<h1>Listado de restaurantes</h1>
+
+<%=link_to "nuevo", restaurante_new_path(@restaurante)%>
+<table>
+
+  <tr>
+    <th>id</th>
+    <th>nombre</th>
+    <th>direccion</th>
+    <th>telefono</th>
+  </tr>
+  <% @restaurantes.each do |res| %>
+    <tr>
+        <td><%= link_to res.id, restaurante_path(res.id) %></td>
+        <td><%= res.nombre %></td>
+        <td><%= res.direccion %></td>
+        <td><%= res.telefono %></td>
+    </tr>
+  <% end %>
+</table>
+
+<button >

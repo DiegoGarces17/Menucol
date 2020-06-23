@@ -1,0 +1,8 @@
+<h1> <%= @restaurante.nombre %></h1>
+
+<h5>Direccion: <%=@restaurante.direccion%> </h5>
+<h5>Telefono: <%=@restaurante.telefono%> </h5>
+
+<%=link_to "editar", restaurante_edit_path(@restaurante)%>
+<%=link_to "eliminar", @restaurante, method: :delete, data: { confirm: "¿esta seguro?" } %>
+
