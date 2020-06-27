@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'bienvenido/index'
+  devise_for :users
+  get 'bienvenido', to: 'bienvenido#bienvenido'
   get 'restaurantes', to: 'restaurantes#index'
   get 'restaurantes/new', to: 'restaurantes#new', as: 'restaurante_new'
   post 'restaurantes', to: 'restaurantes#create'
